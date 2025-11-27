@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservation</title>
+    <meta name="description" content="那覇の海を眺めるリゾートホテル" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="site-header" id="top">
+      <div class="site-header-inner">
+        <a href="#top" class="logo"> SPuLA Hotel </a>
+        <nav class="site-nav">
+          <a href="#hero">ホーム</a>
+          <a href="#reservation">宿泊予約</a>
+          <a href="#news">ニュース</a>
+          <a href="#concept">コンセプト</a>
+          <a href="#restaurant">レストラン</a>
+          <a href="#access">アクセス</a>
+        </nav>
+        <a href="#reservation" class="nav-cta"> ご予約 </a>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main>
+      <section class="availablity-hero" id="hero">
+        <div class="reservation-hero-inner">
+           <p class="reservation-hero-eyebrow">
+            Reservation 
+           </p>
+           <h1 class="reservation-hero-title">
+            客室一覧
+           </h1>
+           <p class="reservation-hero-lead">
+            客室の予約
+           </p>
+        </div>
+      </section>
+      
+      <section class="reservation-filter">
+        <form class="reservation-form" action="" method="post">
+                <label class="reservation-field">
+                    <span>チェックイン</span>
+                    <input type="date" name="checkin" required>
+                </label>
+                <label class="reservation-field">
+                    <span>チェックアウト</span>
+                    <input type="date" name="checkout" required>
+                </label>
+                <label class="reservation-field">
+                    <span>宿泊人数</span>
+                    <select name="guests">
+                        <option value="1">1名</option>
+                        <option value="2" selected>2名</option>
+                        <option value="3">3名</option>
+                        <option value="4">4名</option>
+                        <option value="5">5名</option>
+                    </select>
+                </label>
+                <label class="reservation-field">
+                    <span>客室タイプ</span>
+                    <select name="room">
+                        <option value="ocean">
+                            オーシャンビュー
+                        </option>
+                        <option value="garden">
+                            ガーデンビュー
+                        </option>
+                        <option value="suite">
+                            スイート
+                        </option>
+                    </select>
+                </label>
+                <button class="btn btn--accent" type="submit">
+                    空室状況を確認
+                </button>
+            </form>
+      </section>
+      <section class="reservation-list">
+        <div class="reservation-list-header">
+          <h2 class="section-title">
+            客室一覧
+          </h2>
+          <p class="reservation-count">
+            3件見つかりました
+          </p>
+        </div>
+        <div class="reservation-grid">
+          <article class="reservation-card">
+            <div class="reservation-card-head">
+              <div>
+                <p class="reservation-card-eyebrow">
+                  Premium Ocean View
+                </p>
+                <h3 class="reservation-card-title">
+                  プレミアムオーシャンビュー
+                </h3>
+              </div>
+              <span class="reservation-badge">
+                おすすめ
+              </span>
+            </div>
+            <div class="reservation-price">
+              <div>
+                <p class="reservation-price-label">
+                  1泊
+                </p>
+                <p class="reservation-price-value">
+                  15,000円
+                </p>
+              </div>
+            </div>
+            <div class="reservation-action">
+              <a href="#" class="btn btn--primary">
+                この客室を選ぶ
+              </a>
+            </div>
+          </article>
+          <article class="reservation-card">
+            <div class="reservation-card-head">
+              <div>
+                <p class="reservation-card-eyebrow">
+                  club room
+                </p>
+                <h3 class="reservation-card-title">
+                  クラブルーム
+                </h3>
+              </div>
+            </div>
+            <div class="reservation-price">
+              <div>
+                <p class="reservation-price-label">
+                  1泊
+                </p>
+                <p class="reservation-price-value">
+                  20,000円
+                </p>
+              </div>
+            </div>
+            <div class="reservation-action">
+              <a href="#" class="btn btn--primary">
+                この客室を選ぶ
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <div class="site-footer-brand">
+          <a href="#top" class="logo">SPuLA Hotel</a>
+          <p class="site-footer-copy">&copy;2025 SPuLA Hotel</p>
+        </div>
+        <div class="site-footer-links">
+          <a href="#rooms">客室</a>
+          <a href="#restaurant">レストラン</a>
+          <a href="#access">アクセス</a>
+          <a href="#news">ニュース</a>
+          <a href="#reservation">ご予約</a>
+        </div>
+        <div class="site-footer-sns">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+    </footer>
+
+    <nav class="bottom-nav">
+      <a href="#hero" class="bottom-nav-link">ホーム</a>
+      <a href="#reservation" class="bottom-nav-link">宿泊予約</a>
+      <a href="#access" class="bottom-nav-link">アクセス</a>
+    </nav>
+  </body>
+</html>
