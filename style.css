@@ -112,6 +112,14 @@ section {
   margin-left: auto;
   font-size: 0.85rem;
   padding-bottom: 0.2rem;
+
+  & ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    padding: 0.3rem 0;
+    margin: 0;
+  }
 }
 
 @media (max-width: 599px) {
