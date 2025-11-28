@@ -1,10 +1,19 @@
 <?php get_header(); ?>
  <!-- main -->
      <main>
+        <?php
+        // URL = mainvisual
+        $mainvisual = get_page_by_path('mainvisual');
+
+        if($mainvisual) {
+            $mainvisual_id = $mainvisual->ID;
+            $mainvisual_eyebrow =  get_post_meta($mainvisual_id, 'eyebrow', true);
+        }
+        ?>
         <section class="hero" id="hero">
             <div class="hero-content">
                 <p class="hero-eyebrow">
-                    南の島でリゾート体験
+                    <?php echo esc_html($mainvisual_eyebrow); ?>
                 </p>
                 <h1>
                     海と温泉で、癒しの滞在
