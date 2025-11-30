@@ -8,6 +8,8 @@
         if($mainvisual) {
             $mainvisual_id = $mainvisual->ID;
             $mainvisual_eyebrow =  get_post_meta($mainvisual_id, 'eyebrow', true);
+            $mainvisual_title = get_post_meta($mainvisual_id, 'title', true);
+            $mainvisual_lead = get_post_meta($mainvisual_id, 'lead', true);
         }
         ?>
         <section class="hero" id="hero">
