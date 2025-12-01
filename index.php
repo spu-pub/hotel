@@ -18,9 +18,11 @@
                     <?php echo esc_html($mainvisual_eyebrow); ?>
                 </p>
                 <h1>
+                    <?php echo esc_html($mainvisual_title); ?>
                     海と温泉で、癒しの滞在
                 </h1>
                 <p class="hero-lead">
+                    <?php echo esc_html($mainvisual_lead); ?>
                     那覇空港から車で10分。心と身体をリラックス
                 </p>
                 <a href="#reservation" class="btn btn--primary">
