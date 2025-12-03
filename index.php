@@ -92,8 +92,10 @@
                     <?php if ($news_query -> have_posts()) : ?>
                     <?php while ($news_query -> have_posts()) : $news_query -> the_post(); ?>
                     <li class="news-item">
-                        <time datetime="2025-10-17">
-                            2025.10.17
+                        <time datetime="<?php echo esc_attr(get_the_date('c')); ?>">
+                            <?php 
+                            echo esc_html(get_the_date('Y.m.d'));
+                            ?>
                         </time>
                         <a href="#">
                             夏季限定「ナイトプール、シャンパン」プランのご案内
