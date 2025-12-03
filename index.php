@@ -23,7 +23,6 @@
                 </h1>
                 <p class="hero-lead">
                     <?php echo esc_html($mainvisual_lead); ?>
-                    
                 </p>
                 <a href="#reservation" class="btn btn--primary">
                     宿泊プランを見る
@@ -81,6 +80,17 @@
                     ニュース
                 </h2>
                 <ul class="news-list">
+                    <?php 
+                    $news_query = new WP_Query(
+                        array(
+                            'post_type' => 'post',
+                            'posts_per_page' => 3,
+                            'post_status' => 'publish',
+                        )
+                        );
+                    ?>
+                    <?php if ($news_query -> have_posts()) : ?>
+                    <?php while ($news_query -> have_posts()) : $news_query -> the_post(); ?>
                     <li class="news-item">
                         <time datetime="2025-10-17">
                             2025.10.17
@@ -89,16 +99,14 @@
                             夏季限定「ナイトプール、シャンパン」プランのご案内
                         </a>
                     </li>
-
-                    <li class="news-item">
-                        <time datetime="2025-10-17">
-                            2025.10.16
-                        </time>
-                        <a href="#">
-                            夏季限定「BBQ」プランのご案内
-                        </a>
-                    </li>
+                    <?php endwhile; ?>
                 </ul>
+                <?php wp_reset_postdata(); ?>
+                <?php else : ?>
+                    <p class="news-empty">
+                        News Not Found.
+                    </p>
+                <?php endif; ?>
             </div>
          </section>
 
