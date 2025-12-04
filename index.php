@@ -97,8 +97,8 @@
                             echo esc_html(get_the_date('Y.m.d'));
                             ?>
                         </time>
-                        <a href="#">
-                            夏季限定「ナイトプール、シャンパン」プランのご案内
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_title(); ?>
                         </a>
                     </li>
                     <?php endwhile; ?>
@@ -113,6 +113,17 @@
          </section>
 
          <!-- concept -->
+          <?php
+          $concept = get_page_by_path('concept');
+
+          if ($concept) {
+            $concept_id = $concept->ID;
+            $concept_title = get_post_meta($concept_id, 'title', true);
+            $concept_catch = get_post_meta($concept_id, 'catch', true);
+            $concept_text = get_post_meta($concept_id, 'text', true);
+          }
+          ?>
+
           <section id="concept" class="concept">
             <div class="concept-inner">
                 <h2 class="section-title">
