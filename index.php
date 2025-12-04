@@ -109,6 +109,17 @@
                         News Not Found.
                     </p>
                 <?php endif; ?>
+                <?php
+                $news_archive_link = get_permalink(get_option('page_for_posts'));
+                if(!$news_archive_link) {
+                    $news_archive_link = get_post_type_archive_link('post');
+                }
+                if($news_archive_link) :
+                ?>
+                <a href="" class="section-link">
+                    All View
+                </a>
+                <?php endif; ?>
             </div>
          </section>
 
