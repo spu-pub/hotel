@@ -243,6 +243,19 @@
             </div>
            </section>
 
+           <?php
+           $access = get_page_by_path('access');
+           if($access) {
+            $access_id = $access->ID;
+            $access_address = get_post_meta($access_id, 'address', true);
+            $access_note = get_post_meta($access_id, 'note', true);
+            $access_tel = get_post_meta($access_id, 'tel', true);
+            $access_email = get_post_meta($access_id, 'email', true);
+            $access_parking = get_post_meta($access_id, 'parking', true);
+            $access_map = get_post_meta($access_id, 'map', true);
+           }
+           ?>
+           
            <section id="access" class="access">
             <h2 class="section-title">
                 アクセス
