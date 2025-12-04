@@ -127,13 +127,13 @@
           <section id="concept" class="concept">
             <div class="concept-inner">
                 <h2 class="section-title">
-                    心ほぐれる宿泊体験
+                    <?php echo esc_html($concept_title); ?>
                 </h2>
                 <p class="concept-catch">
-                    「海風にのせて、あなたの時間を深呼吸」
+                    <?php echo esc_html($concept_catch); ?>
                 </p>
                 <p class="concept-text">
-                    サンセットと、心地よく吹き抜ける海風。
+                    <?php echo esc_html($concept_text); ?>
                 </p>
             </div>
           </section>
