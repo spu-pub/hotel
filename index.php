@@ -255,7 +255,7 @@
             $access_map = get_post_meta($access_id, 'map', true);
            }
            ?>
-           
+
            <section id="access" class="access">
             <h2 class="section-title">
                 アクセス
@@ -263,23 +263,23 @@
             <div class="access-grid">
                 <div class="access-info">
                     <p class="access-address">
-                        〒900-0000 沖縄県那覇市泊
+                        <?php echo esc_html($access_address); ?>
                     </p>
                     <p>
-                        那覇空港から車で10分
+                        <?php echo esc_html($access_note); ?>
                     </p>
                     <dl class="access-contact">
                         <div>
                             <dt>Tel</dt>
-                            <dd>098-000-1234</dd>
+                            <dd><?php echo esc_html($access_tel); ?></dd>
                         </div>
                         <div>
                             <dt>Email</dt>
-                            <dd>info@spula.jp</dd>
+                            <dd><?php echo esc_html($access_email); ?></dd>
                         </div>
                         <div>
                             <dt>駐車場</dt>
-                            <dd>200台</dd>
+                            <dd><?php echo esc_html($access_parking); ?></dd>
                         </div>
                     </dl>
                     <a href="#" class="section-link" target="_blank">
@@ -287,7 +287,7 @@
                     </a>
                 </div>
                 <div class="access-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14316.594572644644!2d127.67545726825878!3d26.224359334547593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697e6c17138f%3A0x44390a0379ff88c!2z44CSOTAwLTAwMTIg5rKW57iE55yM6YKj6KaH5biC5rOK!5e0!3m2!1sja!2sjp!4v1761267688472!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <?php echo $access_map ?>
                 </div>
             </div>
            </section>
