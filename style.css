@@ -791,3 +791,10 @@ section {
   font-weight: bold;
   color: var(--color-primary-dark);
 }
+
+/* single */
+.news-detail-hero {
+  background: linear-gradient(150deg, rgba(11, 70, 86, 0.9), rgba(39, 125, 143, 0.75));
+  padding: clamp(3.5rem, 7vw, 5rem) 1.5rem;
+  color: #fff;
+}
