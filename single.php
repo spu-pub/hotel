@@ -11,7 +11,7 @@
             </div>
         </div>
     </section>
-    <article>
+    <article class="news-detail">
         <div class="news-detail_body">
             <?php the_content(); ?>
         </div>
