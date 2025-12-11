@@ -833,3 +833,11 @@ section {
   }
 }
 
+/* room reservation */
+.availability-hero, .reservation-hero {
+  background: linear-gradient(145deg, rgba(7, 51, 68, 0.9),
+  rgba(16, 132, 150, 0.65));
+  color: #fff;
+  text-align: center;
+}
+
